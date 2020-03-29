@@ -1,0 +1,148 @@
+$color-darkgrey: #414141;
+$color-body-background: #f5f5f5;
+$color-lightblue: #98c1ff;
+$color-lightorange: #ffc08a;
+$color-lightred: #ff5656;
+$color-cta: orange;
+
+$font-family-logo: 'Roboto Slab', sans-serif;
+$font-family-primary: 'Roboto', sans-serif;
+
+#syn-ext-target {
+  position: relative !important;
+  display: inline-block !important;
+  &:after {
+    content: '' !important;
+    width: 2rem !important;
+    height: 2rem !important;
+    z-index: 9999999 !important;
+    position: absolute !important;
+    bottom: 100% !important;
+    left: 0 !important;
+    background: $color-lightblue !important;
+    clip-path: polygon(100% 0, 0 0, 50% 50%) !important;
+    transform: translateX(-50%) !important;
+  }
+  .syn-ext {
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 0rem !important;
+    font-size: 1rem !important;
+    min-width: 25rem !important;
+    height: auto !important;
+    max-height: 15rem !important;
+    overflow-y: scroll !important;
+    transform: translateX(-50%) !important;
+    position: absolute !important;
+    // height of caret is 1rem
+    bottom: calc(100% + 2rem) !important;
+    left: 50% !important;
+    z-index: 9999999 !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,.1) !important;
+    border-radius: 2px !important;
+    * {
+      box-sizing: border-box !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      font-size: 1rem !important;
+      font-style: normal !important;
+      text-align: left !important;
+      -webkit-font-smoothing: antialiased !important;
+      -moz-osx-font-smoothing: grayscale !important;
+      font-family: $font-family-primary !important;
+      max-width: 100% !important;
+    }
+    .syn-ext-site-link {
+      cursor: pointer !important;
+    }
+    .syn-ext-logo {
+      color: $color-darkgrey !important;
+      font-size: 1.75rem !important;
+      font-weight: 300 !important;
+      font-family: $font-family-logo !important;
+      padding: 1rem !important;
+      text-align: center !important;
+      color: $color-darkgrey !important;
+      letter-spacing: -.0083333333em !important;
+      -moz-osx-font-smoothing: grayscale !important;
+      background: $color-lightblue !important;
+    }
+    .syn-ext-wrapper {
+      padding: 1rem !important;
+      background: $color-body-background !important;
+    }
+    .syn-ext-results-list {
+      list-style: none !important;
+      .syn-ext-error {
+        color: $color-lightred !important;
+        font-size: 1.5rem !important;
+        margin-bottom: 1rem !important;
+        text-align: center !important;
+      }
+      .syn-ext-result {
+        margin-bottom: 1rem !important;
+        .syn-ext-result-title {
+          white-space: nowrap !important;
+          font-size: 3rem !important;
+          line-height: 3rem !important;
+          letter-spacing: -.00833em !important;
+          font-family: $font-family-primary !important;
+          font-weight: 300 !important;
+          text-transform: lowercase !important;
+          margin-bottom: .5rem !important;
+        }
+        .syn-ext-result-definition {
+          margin-bottom: 1rem !important;
+          .part-of-speech {
+            font-style: italic !important;
+          }
+        }
+        .syn-ext-result-section {
+          box-shadow: 0 3px 10px -8px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12) !important;
+          border-radius: 2px !important;
+          background: white !important;
+          margin-bottom: 1rem !important;
+          &.synonyms {
+            .syn-ext-clickables-wrapper {
+              .syn-ext-clickable {
+                background-color: $color-lightblue !important;
+                &:hover {
+                  background: darken($color-lightblue, 5%) !important;
+                }
+              }
+            }
+          }
+          .syn-ext-result-section-title {
+            padding: .5rem !important;
+            font-size: 1.5rem !important;
+            border-bottom: 1px solid #d4d4d4 !important;
+          }
+          .syn-ext-clickables-wrapper {
+            padding: .5rem 1rem !important;
+            .syn-ext-clickable {
+              display: inline-block !important;
+              margin-bottom: .5rem !important;
+              margin-right: .25rem !important;
+              border-radius: 30px !important;
+              font-size: 1.1rem !important;
+              padding: .5rem !important;
+              background: $color-lightorange !important;
+              cursor: pointer !important;
+              transition: background .2s ease-in-out !important;
+              &:hover {
+                background: darken($color-lightorange, 5%) !important;
+              }
+            }
+          }
+        }
+      }
+    }
+    .syn-ext-footer {
+      text-align: center !important;
+      color: $color-darkgrey !important;
+      a {
+        color: $color-cta !important;
+      }
+    }
+  }
+}

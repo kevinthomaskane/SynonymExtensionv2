@@ -4,7 +4,7 @@
   "description": "Select a word and get synonyms and antonyms. Brought to you by Synonym.com",
   "permissions": ["activeTab", "contextMenus"],
   "background": {
-    "scripts": ["background.js"],
+    "scripts": ["js/background.js"],
     "persistent": false
   },
   "browser_action": {
@@ -25,15 +25,15 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "css": ["content.css"],
-      "js": ["contentScript.js"]
+      "css": ["css/content.css"],
+      "js": ["js/contentScript.js"]
     }
   ],
   "web_accessible_resources": [
     "images/favicon.png",
     "*.html",
-    "*.js",
-    "*.css"
+    "js/*",
+    "css/*"
   ],
   "manifest_version": 2
 }
