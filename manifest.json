@@ -1,6 +1,6 @@
 {
   "name": "Synonym",
-  "version": "2.3",
+  "version": "2.6",
   "description": "Select a word and get synonyms and antonyms. Brought to you by Synonym.com",
   "permissions": ["activeTab", "contextMenus"],
   "background": {
